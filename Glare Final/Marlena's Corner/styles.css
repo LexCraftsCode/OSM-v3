@@ -1,0 +1,96 @@
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+/*new stuff begin*/
+h3 {
+	text-transform: uppercase;
+	margin: 0px;}
+
+h4 {
+	font-weight: normal;
+	margin: auto 0px auto 10px;
+}
+
+.legend {
+	background-color: #f0f0f0;
+	padding: 10px;
+	max-width: 40%;
+    margin: 20px 0px;}
+
+.legenditem {
+	display: flex;
+	}
+
+.legenditem img {
+	max-width: 7%;
+	object-fit: contain;
+	padding: 5px;
+}
+/*new stuff end*/
+
+img {
+    max-width: 100%;
+    padding: 20px 0px 20px 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Oswald, Source Sans Pro, Arial, sans-serif;
+    line-height: 1.5em;
+    color: #1E1E1E;
+    margin: 0px auto;
+    max-width: 1000px;
+    padding-inline-start: 0px
+}
+
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+p {
+    max-width: 60%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+.collapsible:hover {
+    background-color: #f4a338;
+}
+
+h3 {
+    text-transform: uppercase;
+}

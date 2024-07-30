@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , intial-scale="1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ROZNER - NONGLARE STATIC SITE</title>
+</head>
+
+<body>
+<header>
+    <nav id="mainnav">
+        <img src="white_afrolisbon.png" alt="AfroLisbon Experience">
+        <h2>Interactive Map</h2>
+        <h2>Site List</h2>
+    </nav>
+</header>
+<main>
+    <div class="legend">
+        <h3>Legend</h3>
+        <div class="legenditem"><img src="yetu.png" alt="Significant historical site icon">
+            <h4>Significant Historical Site</h4>
+        </div>
+        <div class="legenditem"><img src="plaque.png" alt="Batoto Yetu plaque icon">
+            <h4>Batoto Yetu Plaque</h4>
+        </div>
+    </div>
+
+        <!--HEADER-->
+        
+        <h1>Interactive Map</h1>
+        <h2>Significant historical sites and Batoto Yetu plaques in Lisbon</h2>
+        <!--put a map key here-->
+        <!--HOW THE HELL DO I PUT ALEXIS' API IN HERE -->
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About the Team</a>
+                <a href="#">Batotu Yetu</a>
+            </nav>
+
+            <div id="logo">
+                <img src="yetu.png" alt="Logo">
+            </div>
+        </header>
+        <main>
+            <h1>I fixed your code</h1>
+            <p>You're welcome</p>
+        </main>
+        <script src="script.js"></script>
+        <!--INFORMATION COLLAPSIBLES-->
+        <!--SOUZA MARTINS-->
+        <button type="button" class="collapsible">
+            <h3>Doctor Jose de Souza Martins</h3>
+        </button>
+        <div class="content">
+            <div class="flex-container">
+                <p>This garden was one of the places where the Portuguese World Exhibition of 1940 took place, created
+                    in the political and Ideological context of the New State (Estado Novoa) to promote the colonial
+                    empire. Here, the attempt to recreate the life of African villages marked by colonial presence,
+                    where people were brought over explicitly from the colonies to be presented to the Portuguese
+                    public.</p>
+                <img src="yetu.png" alt="logo">
+            </div>
+            <!--JAVASCRIPT-->
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+    </main>
+</body>
+
+</html>

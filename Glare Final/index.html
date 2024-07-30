@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glare OSM Site</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <header>
+        <nav class="legend">
+            <h3>Legend</h3>
+            <div class="legenditem"><img src="yetu.png" alt="Significant historical site icon">
+                <h4>Significant Historical Site</h4>
+            </div>
+            <div class="legenditem"><img src="./img/plaque.png" alt="Batoto Yetu plaque icon">
+                <h4>Batoto Yetu Plaque</h4>
+            </div>
+        </nav>
+    </header>
+    <div id="map-container">
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!--Leaflet JS (moved to #map container)-->
+        <div id="map"></div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="content">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                    <a id="modal-link" target="_blank" href="">Learn More</a>
+                </div>
+                <div class="images" id="modal-images">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--Accordion-->
+
+<body div class="c.body">
+    <button class="accordion">Sites</button>
+    <div class="panel">
+        <button class="accordion">Marques de Pombal</button>
+        <div class="panel">
+            <p>This garden was one of the places where the Portuguese World Exhibition of 1940 took place,
+                created in the political and Ideological context of the New State (Estado Novoa) to promote the
+                colonial empire. Here, the attempt to recreate the life of African villages marked by colonial
+                presence, where people were brought over explicitly from the colonies to be presented to the
+                Portuguese public.</p>
+            <img class="c-img" src="./img/sites/MQP_1.jpg" alt="Statue of Marques de Pombal">
+        </div>
+        <button class="accordion">Carlos Lopez Pavillion</button>
+        <div class="panel">
+            <p>NOT FINISHED</p>
+            <img class="c-img" src="./img/sites/doc4.jpg" alt="Carlos Lopez Pavillion">
+        </div>
+        <button class="accordion">José Tomás de Sousa Martins</button>
+        <div class="panel">
+            <p>The statue of Dr. Sousa Martins is significant because he was a doctor, scientist and humanist. He  worked for the royal family and for the people who were of lower economic status would charge his patients nothing and would often give them money. Due to his generosity and kindness he is a lay saint and people still honor him today.</p>
+            <img class="c-img" src="./img/sites/doc2.jpg" alt="Statue of Dr. Sousa Martins">
+        </div>
+        <button class="accordion">Pai Paulino</button>
+        <div class="panel">
+            <p>The statue of Pai Paulino is not just a representation of one man but a symbol of the enduring spirit of resilience, love, and leadership within the Candomblé religion and the broader Luso-Afro community. It stands as a reminder of the strength found in unity, the importance of cultural heritage, and the power of familial bonds reconstructed through faith and shared history. The olive tree further enhances this symbolism, offering a profound connection to the values Pai Paulino embodied throughout his life.</p>
+            <img class="c-img" src="./img/sites/PAI_1.jpg" alt="Olive Tree near Pai Paulino statue">
+        </div>
+    </div>
+    <button class="accordion">Plaques</button>
+    <div class="panel">
+        <button class="accordion">Plaque #1: Andresa do Nascimento Pina</button>
+        <div class="panel">
+            <p>As the model for the statue of abolitionist Marquês de Sá da Bandeira, Fernanda do Valle, also known as 'Preta Fernanda' was a writer, bullfighter, and overall influencial woman from Cape Verde who significantly impacted Lisbon society and the history of Africans in Portugal. Her life sheds light on the complex social dynamics at the time, providing valuable insights of pioneer African women.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque1_edited.jpeg" alt="Plaque #1: Andresa do Nascimento Pina">
+        </div>
+        <button class="accordion">Plaque #2: Domingos Caldas Barbosa</button>
+        <div class="panel">
+            <p>Despite being mixed race and cognizant that his social status was questionable, Domingos Caldas Barbosa was able to climb the ranks of Portuguese high-society and literary circles. His musical compositions of Afro-Brazilian lundu and his invention of the genre modinha served as the backbone for the Portuguese genre Fado.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque2_edited.jpeg" alt="Plaque #2: Domingos Caldas Barbosa">
+        </div>
+        <button class="accordion">Plaque #3: Dr. José Tomás de Sousa Martins</button>
+        <div class="panel">
+            <p>Dr. José Tomas de Sousa Martins Alhandra was a doctor and main professor at the Lisbon Medical-Surgical School. Recognized for his pioneering teaching and generosity towards patients, he achieved a reputation as a healer of psychic and physical wounds. He assisted in creating sanitariums in various parts of the world for people with serious diseases, including Tuberculosis.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque3_edited.jpeg" alt="Plaque #3: Dr. José Tomás de Sousa Martins">
+        </div>
+        <button class="accordion">Plaque #4: Jardim Botânico Tropical</button>
+        <div class="panel">
+            <p>Jardim Botânico Tropical was founded in 1906, ordered by the king, with the intention of organizing and rehabilitating colonial agriculture. Numerous pavilion structures were erected to represent Portuguese expansion, demonstrating lifestyles in colonies such as Angola and Mozambique. Today, the garden harbors several busts and statues of African indigenous figures as a reminder of the exploitations that came with colonial agriculture.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque4_edited.jpeg" alt="Plaque #4: Jardim Botânico Tropical">
+        </div>
+        <button class="accordion">Plaque #5: Bairro do Mocambo</button>
+        <div class="panel">
+            <p>The Mocambo Neighborhood was a sanctuary for its African residents because it gave them autonomy in terms of housing and cultural expression. Nevertheless, as time went on, this area underwent several name changes and its reputation diminished, thus contributing to its African past being forgotten. Today, the neighborhood is popular and home to the working-class.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque5_edited.jpeg" alt="Plaque #5: Bairro do Mocambo">
+        </div>
+        <button class="accordion">Plaque #6: Rainha Do Congo</button>
+        <div class="panel">
+            <p>Maria Amália I helped spread African influence across Lisbon. Through her efforts, she organized parties and dances to incorporate African and Portuguese culture through dance, music, food, and every culture worldwide. Her parties and organizations would make headline news, and she would be well-known across Lisbon.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque6_edited.jpeg" alt="Plaque #6: Rainha Do Congo">
+        </div>
+        <button class="accordion">Plaque #7: Cais Do Sodré</button>
+        <div class="panel">
+            <p>Cais Do Sodré was a location of movement between people, goods, and money throughout history. Africans have played a role in the transformation of the neighborhood through their contributions as merchants, laborers, dancers, and music performers.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque7_edited.jpeg" alt="Plaque #7: Cais Do Sodré">
+        </div>
+        <button class="accordion">Plaque #8: Marquês De Sá Da Bandeira</button>
+        <div class="panel">
+            <p>The most noted Portuguese defender of the abolition of slavery, Marquês De Sá Da Bandeira was critical in the efforts to outlaw slavery and the slave trade in the Portuguese empire around the world. He was responsible for drafting Portugal's first modern constitution in 1822.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque8-edited.jpeg" alt="Plaque #8: Marquês De Sá Da Bandeira">
+        </div>
+        <button class="accordion">Plaque #9: Poço dos Negros</button>
+        <div class="panel">
+            <p>The mass burial site near Rua Poco dos Negros was ordered to serve as a burial ground to combat the health hazards caused by rotting African corpses discarded in various places across Lisbon. While the mass burial pit has been gone since the 18th century, the neighborhood of  Mocambo became a center for African life. The cross street of Rua Poco dos Negros is “Jewish Crossing,” yet another of the neighborhood’s cosmopolitan, marginal, and laboring past. A 2020 namesake rap album 'Rua do Poco dos Negros'  by Portuguese hiphop artist and former Benfica resident Valete (born Keidje Torres Lima) addresses the history and current implications of race relations in Portugal.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque9_edited.jpeg" alt="Plaque #9: Poço dos Negros">
+        </div>
+        <button class="accordion">Plaque #10: Virgínia Sofia Guerra Quaresma</button>
+        <div class="panel">
+            <p>Virgínia Sofia Guerra Quaresma was the first female Portuguese journalist and  a passionate activist. Being as she was of African descent, a feminist, and a fighter for equal rights during the late 19th and early 20th centuries, her contributions were, and remain, monumental.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque10_edited.jpeg" alt="Plaque #10: Virgínia Sofia Guerra Quaresma">
+        </div>
+        <button class="accordion">Plaque #11: Basílica de Nossa Senhora dos Mártires</button>
+        <div class="panel">
+            <p>After Lisbon was reclaimed from the Moors in the 1100s with the help of the English, this church was immediately built in honor of the Virgin Mary who the warriors prayed to in battle. After the earthquake in 1755, the original church was demolished and reopened in its current location in 1786.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque11_edited.jpeg" alt="Plaque #11: Basílica de Nossa Senhora dos Mártires">
+        </div>
+        <button class="accordion">Plaque #12: Campo das Cebolas</button>
+        <div class="panel">
+            <p>Campo das Cebolas was a center point for African workers and merchants. Following the earthquake of 1755, a floodwall was constructed, and the area now stands as a tribute to the African workers and how they influenced commercial advancements within Lisbon.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque12_edited.jpeg" alt="Plaque #12: Campo das Cebolas">
+        </div> <button class="accordion">Plaque #13: Chafariz d'El Rey</button>
+        <div class="panel">
+            <p>The Kings Fountain painting depicts the vast social classes within Lisbon. In the bottom right corner, there appears to be an African dressed in upper-class clothing riding a horse. This represents a side of African history within Portugal where some Africans held upper-class titles.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque13_edited.jpeg" alt="Plaque #13: Chafariz d'El Rey">
+        </div> <button class="accordion">Plaque #14: Estátua Pai Paulino</button>
+        <div class="panel">
+            <p>An artistic representation and tribute to an honorable figure and inspirational leader with artistic and philosophical talents. Pai Paulino, of whom there were more than one, is not one person, but rather almost an African leadership archtype represents resilience, compassion, and wisdom.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque14_original.jpeg" alt="Plaque #14: Estátua Pai Paulino">
+        </div> <button class="accordion">Plaque #15: Igreja de São Domingos</button>
+        <div class="panel">
+            <p>The Church of São Domingos played a crucial role in protecting the African population in Lisbon. It provided shelter and support, which lessened the severity of their integration into Lisbon society. Today, this space remains rich in diversity and pays homage to various languages, religions, and cultures.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque15_edited.jpeg" alt="Plaque #15: Igreja de São Domingos">
+        </div> <button class="accordion">Plaque #16: Largo do Pelourinho Velho</button>
+        <div class="panel">
+            <p>Destroyed in the earthquake of 1755, the Largo do Pelourinho Velho was a slave market for newly arrived enslaved people in Lisbon during the 16th century. It was here where enslaved people would be redistributed to their newly granted enslavers, given a new name, and soon baptized. It is important to remember this site as historical and significant but also a place of anguish and despair.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque16_edited.jpeg" alt="Plaque #16: Largo do Pelourinho Velho">
+        </div> <button class="accordion">Plaque #18: Praça do Rossio</button>
+        <div class="panel">
+            <p>Rossio Square is a significant place for people of African descent partly because it was a slave market.  Todos os Santos Hospital was built in this location but was destroyed by the 1755 earthquake.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque18_edited.jpeg" alt="Plaque #18: Praça do Rossio">
+        </div> <button class="accordion">Plaque #20: Violante Fernandes</button>
+        <div class="panel">
+            <p>Originally, African women of this community made a living from collecting and distributing water due to regulations of rationing and efficiency. The 'street of black women' was a center of entrepreneurship in the African Lisbon community, most notably of property ownership and sheltering travelers and outsiders.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque20_edited.jpeg" alt="Plaque #20: Violante Fernandes">
+        </div> <button class="accordion">Plaque #21: Igreja de Nossa Senhora da Graças</button>
+        <div class="panel">
+            <p>Four black saints can be seen at the altar of Our Lady of Rosário. African brotherhoods centered around Our Lady of the Rosary were common in Portugal and Brazil as a way for African immigrants and descendants to build community and mutual aid networks. This altar includes depictions of Saint António of Noto (Sicily) and Saint Benedito of Palermo, both sons of African slaves or emancipated, Saint Ifigénia, a 1st century princess of Nubia, and Saint Elesbão, a 6th century emperor of Ethiopia.</p>
+            <img class="c-img" src="./img/plaqueimages/plaque21_edited.jpeg" alt="Plaque #21: Igreja de Nossa Senhora da Graças">
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
